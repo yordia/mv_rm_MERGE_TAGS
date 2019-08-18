@@ -1,0 +1,84 @@
+/* comentario prueba */
+/* detener scroll */
+
+.stop-scrolling {
+	height: 100%;
+	overflow: hidden;
+  }
+
+img,video{
+	/*width: 200px;*/
+	width: 100%;
+	/* height: 80%; */
+	
+}
+.modal{	
+	width: 100%;
+	/* height: 100vh; */
+	/* height: auto; */
+	height: 100vh;;
+	background: rgba(0,0,0,0.85);
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	/*animaciones*/
+	animation: modal 2s;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+	opacity: 0;
+
+}
+.contenido{
+	text-align: center;
+	margin: auto;
+	width: 80%;
+	/* height: 10%; */
+	background: white;
+	border-radius: 10px;
+}
+#cerrar{
+	display: none;
+}
+#cerrar + label{
+	text-align: center;
+	position: absolute;
+	color:#fff;
+	font-size: 33px;
+	z-index: 50;
+	background: darkred;
+	height:40px;
+	width: 40px;
+	border-radius: 50%;
+	right: 10px;
+	cursor: pointer;
+/*misma animacion para boton*/
+	animation: modal 2s;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+	opacity: 0;
+}
+#cerrar:checked+label,#cerrar:checked ~ .modal{
+	display: none;
+	/*overflow-y:scroll;*/
+}
+@keyframes modal{
+	100%{
+		visibility: visible;
+		opacity: 1;
+	}
+}
+/* EDITANDO GALERIAS */
+/* para movil */
+@media only screen and (min-width:0px)and (max-width:420px) {
+	
+}
+/* para tablet */
+@media only screen and (min-width:420px)and (max-width:920px) {
+
+}
+/* FIN EDIT GALERIAS */
+
